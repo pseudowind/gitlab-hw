@@ -1,4 +1,4 @@
-# Домашнее задание к занятию "8.1 Git" - Морковкин Михаил
+# Домашнее задание к занятию "9.1. «Обзор систем IT-мониторинга»" - Морковкин Михаил
 
 
 ### Инструкция по выполнению домашнего задания
@@ -24,16 +24,4 @@
 
 ### Задание 1
 
-`https://github.com/pseudowind/testing/commit/33d288ed6069bce0b1bfcaa1d4e5da416b603fef`
-
----
-
-### Задание 2
-
-`https://github.com/pseudowind/testing/commit/beaadaa08a9ccc71b7d15cacaa552b32f282d9f6`
-
----
-
-### Задание 3
-
-`https://github.com/pseudowind/testing/network`
+![alt text](https://github.com/pseudowind/gitlab-hw/blob/main/9.1.png)
