@@ -1,0 +1,24 @@
+# Домашнее задание к занятию "11.3 ELK" - Морковкин Михаил
+#
+## Задание 1 
+### Установите и запустите Elasticsearch, после чего поменяйте параметр cluster_name на случайный.
+### Приведите скриншот команды 'curl -X GET 'localhost:9200/_cluster/health?pretty', сделанной на сервере с установленным Elasticsearch. Где будет виден нестандартный cluster_name.
+![alt text](https://github.com/pseudowind/gitlab-hw/blob/main/img/elk/1.png?raw=true)
+
+
+## Задание 2. Kibana
+### Приведите скриншот интерфейса Kibana на странице http://<ip вашего сервера>:5601/app/dev_tools#/console, где будет выполнен запрос GET /_cluster/health?pretty.
+![alt text](https://github.com/pseudowind/gitlab-hw/blob/main/img/elk/2.png)
+
+## Задание 3. Logstash
+Установите и запустите Logstash и Nginx. С помощью Logstash отправьте access-лог Nginx в Elasticsearch.
+Приведите скриншот интерфейса Kibana, на котором видны логи Nginx.
+# Тут я уже не могу понять что не так и почему ничего не работает. Потратил на выполнение все эти 5 дней, но застрял. Логи не отправляются, хотя вроде все прописано по презентации.
+Ссылку на конфиги и компоуз прикладываю, буду пытаться сделать другие задания
+https://github.com/pseudowind/gitlab-hw/tree/main/img/elk
+
+## Задание 4. Filebeat
+### Установите и запустите Filebeat. Переключите поставку логов Nginx с Logstash на Filebeat.
+
+Приведите скриншот интерфейса Kibana, на котором видны логи Nginx, которые были отправлены через Filebeat.
+
