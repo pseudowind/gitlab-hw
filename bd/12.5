@@ -1,0 +1,23 @@
+# Домашнее задание к занятию "12.5 Индексы" - Морковкин Михаил
+#
+### Задание 1
+![alt text](https://github.com/pseudowind/gitlab-hw/blob/main/img/12.5/1.png)
+### Задание 2
+![alt text](https://github.com/pseudowind/gitlab-hw/blob/main/img/12.5/2.1.png)
+Уязвимые места
+1. Поиск в таблицах медленный, его можно заменить JOIN
+2. Нужно убрать оконную функцию `OVER`
+3. Нет индекса таблицы `payment_date`, по которой происходит поиск в условии `WHERE`
+
+Добавляем индекс:
+CREATE INDEX idx_payment_date ON payment (payment_date);
+![alt text](https://github.com/pseudowind/gitlab-hw/blob/main/img/12.5/2.2.png)
+SELECT CONCAT(c.last_name, ' ', c.first_name) AS name, SUM(p.amount) AS total_amount
+FROM payment p
+JOIN rental r ON DATE(p.payment_date) = DATE(r.rental_date)
+JOIN customer c ON r.customer_id = c.customer_id
+JOIN inventory i ON i.inventory_id = r.inventory_id
+JOIN film f ON i.film_id = f.film_id
+WHERE p.payment_date >= '2005-07-30' AND p.payment_date < DATE_ADD('2005-07-30', INTERVAL 1 DAY)
+GROUP BY name
+ORDER BY name
